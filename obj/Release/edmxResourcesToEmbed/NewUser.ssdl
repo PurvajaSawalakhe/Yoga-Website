@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LoginModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Login.dbo.NewUser' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="NewUser">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" />
+    <Property Name="Contact_no" Type="varchar" MaxLength="10" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Height" Type="int" />
+    <Property Name="Weight" Type="int" />
+  </EntityType>
+  <EntityContainer Name="LoginModel1StoreContainer">
+    <EntitySet Name="NewUser" EntityType="Self.NewUser" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [NewUser].[UserId] AS [UserId], 
+    [NewUser].[UserName] AS [UserName], 
+    [NewUser].[Password] AS [Password], 
+    [NewUser].[Gender] AS [Gender], 
+    [NewUser].[Contact_no] AS [Contact_no], 
+    [NewUser].[Age] AS [Age], 
+    [NewUser].[Height] AS [Height], 
+    [NewUser].[Weight] AS [Weight]
+    FROM [dbo].[NewUser] AS [NewUser]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

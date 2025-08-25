@@ -1,0 +1,2 @@
+C:\Users\purvja\source\repos\MyApp\wake-fit2\obj\Debug\wake-fit2.csproj.CoreCompileInputs.cache
+C:\Users\purvja\source\repos\MyApp\wake-fit2\obj\Debug\wake-fit2.csproj.AssemblyReference.cache
